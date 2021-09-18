@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body {
+    background-color: black;
+}
+
+#website-name {
+    position: absolute;
+    width: 338px;
+    height: 61px;
+    left: 936px;
+    top: 32px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: center;
+    color: #6bc4f8;
+}
+
+#slogan {
+    position: absolute;
+    width: 910px;
+    height: 351px;
+    left: 266px;
+    top: 100px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 82px;
+    line-height: 117px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#get-started {
+    position: absolute;
+    width: 314px;
+    height: 80px;
+    left: 575px;
+    top: 500px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 80px;
+    text-align: center;
+    text-anchor: middle;
+    color: #000000;
+    background: linear-gradient(270deg, rgba(0, 209, 134, 0.83) 0%, rgba(75, 238, 249, 0.9) 100%);
+    border-radius: 27px;
+    text-decoration: none;
+}
+
+#get-started:link,
+#get-started:hover,
+#get-started:active {
+    color: black;
+    text-decoration: none;
+}
