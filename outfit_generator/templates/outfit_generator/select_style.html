@@ -1,19 +1,26 @@
-{% extends "base.html" %}
+{% load static %}
 
-{% block title %}Select a Style{% endblock %}
-
-{% block content %}
-    <header>
-        <h1><a href="">Home</a></h1>
-    </header>
-    <h1>Select a Style</h1>
-
-    <button type="button" onclick="alert">Test</button>
-
-    <script>
-    function styleSelected() {
-        
-    }
-    </script>
-
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href={% static "outfit_generator/select_style.css" %}>
+</head>
+<body>
+    
+    <h1>What type of outfit are we looking for today?</h1>
+    <ul id = "top-row">
+        <li class = "formal"><a href = "{% url "outfit-generator-page" "generate-formal-outfit"%}">Formal</a></li>
+        <li class = "business-casual"><a href = "{% url "outfit-generator-page" "generate-business-casual-outfit"%}">Business <br> Casual</a></li>
+        <li class ="casual"><a href = "{% url "outfit-generator-page" "generate-casual-outfit"%}">Casual</a></li>
+    </ul>
+    <ul id = "bottom-row">
+        <li class = "athletic"><a href = "{% url "outfit-generator-page" "generate-athletic-outfit"%}">Athletic</a></li>
+        <li class = "leisure"><a href = "{% url "outfit-generator-page" "generate-leisure-outfit"%}">Leisure</a></li>
+        <li class = "something-new"><a href = "{% url "outfit-generator-page" "generate-something-new-outfit"%}">Something <br> New</a></li>
+    </ul>
+</body>
+</html>

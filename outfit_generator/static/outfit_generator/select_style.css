@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+html{
+    background: url(https://ae01.alicdn.com/kf/HTB1_jjOHVXXXXX6XVXXq6xXFXXX5/Issey-Miyake-fold-soft-gray-fabric-crimp-fabric-folds-accordion-pleats-chiffon-dresses-42-yuan-m.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+body{
+    text-align: center;
+    color: white;
+    
+}   
+h1{
+    position: absolute;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5.848vw;
+    line-height: 6.871vw;
+    margin-left: 5vw;
+    margin-right: 12vw;
+    text-align: center;
+    left: 6.468vw;
+}
+ul{
+    position: absolute;
+    list-style-type: none;   
+    font-family: Raleway;
+    font-weight: bold; 
+
+}
+li{
+    float: left;  
+    color: #000000;
+    padding: 10vw;
+    font-size: 2.5vw;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+#top-row{
+    margin-top: 25vw;
+    
+}
+#bottom-row{
+    margin-top: 30vw;
+    margin-left: 7vw;
+}
+.formal{
+    border-radius: 2vw;
+    padding: 4vw;
+    margin-left: 12vw;
+    background: rgba(255, 255, 255, 0.8);
+}
+.business-casual{
+    border-radius: 2vw;
+    padding: 2.6vw; 
+    margin-left: 10vw;
+    background: rgba(255, 255, 255, 0.8);
+}
+.casual{
+    border-radius: 2vw;
+    padding: 4vw;
+    margin-left: 10vw;
+    background: rgba(255, 255, 255, 0.8);
+}
+.athletic{
+    border-radius: 2vw;
+    padding: 4vw;
+    margin-left: 5vw;
+    margin-top: 10vw;
+    background: rgba(255, 255, 255, 0.8);
+}
+.leisure{
+    border-radius: 2vw;
+    padding: 4vw;
+    margin-left: 9vw;
+    margin-top: 10vw;
+    background: rgba(255, 255, 255, 0.8);
+}
+.something-new{
+    border-radius: 2vw;
+    padding: 2.6vw;
+    margin-left: 9vw;
+    margin-top: 10vw;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+
