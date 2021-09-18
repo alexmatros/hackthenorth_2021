@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+body {
+    background-color: black;
+}
+
+#back {
+    position: absolute;
+    left: 2.64%;
+    right: 73.68%;
+    top: 6.93%;
+    bottom: 90.62%;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+#style-bg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 76px;
+    position: absolute;
+    left: 8.33%;
+    right: 76.39%;
+    top: 13.48%;
+    bottom: 75.78%;
+    background: linear-gradient(90deg, #0DE0EE 0%, rgba(25, 205, 140, 0.82) 100%);
+    border-radius: 19px;
+}
+
+#style-txt {
+    position: static;
+    width: 171px;
+    height: 35px;
+    left: 24.5px;
+    top: 37.5px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: #000000;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+
+#l-arrow-shirt,
+#l-arrow-pants,
+#l-arrow-shoes,
+#r-arrow-shirt,
+#r-arrow-pants,
+#r-arrow-shoes {
+    position: absolute;
+    text-align: center;
+    margin-bottom: 6px;
+    height: 10px;
+    width: 80px;
+}
+
+#l-arrow-shirt,
+#l-arrow-pants,
+#l-arrow-shoes {
+    transform: rotateZ(90deg)
+}
+
+#r-arrow-shirt,
+#r-arrow-pants,
+#r-arrow-shoes {
+    transform: rotateZ(-90deg)
+}
+
+#l-arrow-shirt:before,
+#l-arrow-pants:before,
+#l-arrow-shoes:before,
+#r-arrow-shirt:before,
+#r-arrow-pants:before,
+#r-arrow-shoes:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 51%;
+    background: #8f8f8f;
+    transform: skew(0deg, 40deg);
+}
+
+#l-arrow-shirt:after,
+#l-arrow-pants:after,
+#l-arrow-shoes:after,
+#r-arrow-shirt:after,
+#r-arrow-pants:after,
+#r-arrow-shoes:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background: #8f8f8f;
+    transform: skew(0deg, -40deg);
+}
+
+#l-arrow-shirt {
+    left: 430px;
+    top: 175px;
+}
+
+#l-arrow-pants {
+    left: 430px;
+    top: 415px;
+}
+
+#l-arrow-shoes {
+    left: 430px;
+    top: 615px;
+}
+
+#r-arrow-shirt {
+    right: 430px;
+    top: 175px;
+}
+
+#r-arrow-pants {
+    right: 430px;
+    top: 415px;
+}
+
+#r-arrow-shoes {
+    right: 430px;
+    top: 615px;
+}
+
+#l-arrow-shirt:hover::before,
+#l-arrow-shirt:hover::after,
+#l-arrow-pants:hover::before,
+#l-arrow-pants:hover::after,
+#l-arrow-shoes:hover::before,
+#l-arrow-shoes:hover::after,
+#r-arrow-shirt:hover::before,
+#r-arrow-shirt:hover::after,
+#r-arrow-pants:hover::before,
+#r-arrow-pants:hover::after,
+#r-arrow-shoes:hover::before,
+#r-arrow-shoes:hover::after {
+    background: red;
+}
+
+#shirt {
+    position: absolute;
+    left: 37.99%;
+    right: 38.06%;
+    top: 8%;
+    bottom: 60%;
+    background: #EBEBEB;
+}
+
+#pants {
+    position: absolute;
+    left: 37.99%;
+    right: 38.06%;
+    top: 44%;
+    bottom: 28%;
+    background: #EBEBEB;
+}
+
+#shoes {
+    position: absolute;
+    left: 37.99%;
+    right: 38.06%;
+    top: 76%;
+    bottom: 7.81%;
+    background: #EBEBEB;
+}

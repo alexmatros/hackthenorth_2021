@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfit Generator</title>
+    <link rel="stylesheet" href={% static "outfit_generator/outfit_generator.css" %}>
+</head>
+
+<body>
+    <a href="{% url "select-style-page"%}" id="back">←  Back to outfit types</a>
+    <div id="style-bg"><h1 id="style-txt">{{ style|title }}</h1></div>
+    
+    <div id="l-arrow-shirt" onclick='changeColor("shirt", "-1")'></div>
+    <div id="shirt"></div>
+    <div id="r-arrow-shirt" onclick='changeColor("shirt", "1")'></div>
+
+    <div id="l-arrow-pants" onclick=alert("pressed!")></div>
+    <div id="pants"></div>
+    <div id="r-arrow-pants" onclick=alert("pressed!")></div>
+
+    <div id="l-arrow-shoes" onclick=alert("pressed!")></div>
+    <div id="shoes"></div>
+    <div id="r-arrow-shoes" onclick=alert("pressed!")></div>
+
+    <script>
+        const colors = ["#ebebeb", "#00fbff", "#ee00ff", "#000000", "#2bff00"]
+        var idx_shirt = colors[0]
+        var idx_pants = colors[0]
+        var idx_shoes = colors[0]
+
+        function changeColor(id, direction) {
+            alert(document.getElementById(id).style.background)
+            
+            if (id == "shirt") {
+                if (idx_shirt == 0 && parseInt(direction) == -1) {
+                    idx_shirt = colors.length - 1
+                }
+                else {
+                    idx_shirt += parseInt(direction)
+                }
+
+                document.getElementById(id).style.background = colors[idx_shirt]
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -7,5 +7,8 @@ def starting_page(request):
 def select_style(request):
     return render(request, "outfit_generator/select_style.html")
 
-def outfit_generator(request):
-    pass
+def outfit_generator(request, style):
+    style_name = style[style.index("-") + 1:style.rindex("-")]
+    return render(request, "outfit_generator/outfit_generator.html", {
+        "style": style_name
+    })

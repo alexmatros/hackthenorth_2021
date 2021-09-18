@@ -19,43 +19,68 @@ body {
     color: #6bc4f8;
 }
 
-#slogan {
+#quote {
     position: absolute;
-    width: 910px;
+    width: 800px;
     height: 351px;
-    left: 266px;
-    top: 100px;
+    left: 320px;
+    top: 80px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 82px;
+    font-size: 90px;
     line-height: 117px;
     text-align: center;
     color: #FFFFFF;
 }
 
-#get-started {
+#ysl {
     position: absolute;
+    width: 351.06px;
+    height: 50.43px;
+    left: 545px;
+    top: 400px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 47px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#get-started-bg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 400px;
+    height: 83px;
+    left: 520px;
+    top: 550px;
+    background: linear-gradient(270deg, rgba(0, 209, 134, 0.83) 0%, rgba(75, 238, 249, 0.9) 100%);
+    border-radius: 27px;
+}
+
+#get-started-txt {
+    position: static;
     width: 314px;
-    height: 80px;
-    left: 575px;
-    top: 500px;
+    height: 47px;
+    left: 49.5px;
+    top: 18px;
     font-family: Raleway;
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
-    line-height: 80px;
+    line-height: 47px;
+    /* identical to box height */
     text-align: center;
-    text-anchor: middle;
     color: #000000;
-    background: linear-gradient(270deg, rgba(0, 209, 134, 0.83) 0%, rgba(75, 238, 249, 0.9) 100%);
-    border-radius: 27px;
-    text-decoration: none;
-}
-
-#get-started:link,
-#get-started:hover,
-#get-started:active {
-    color: black;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
     text-decoration: none;
 }
