@@ -3,6 +3,12 @@ body {
     background-color: black;
 }
 
+:root {
+    --shirt-color: black;
+    --pants-color: black;
+    --shoes-color: black;
+}
+
 #back {
     position: absolute;
     left: 2.64%;
@@ -37,7 +43,42 @@ body {
 #style-txt {
     position: static;
     width: 171px;
-    height: 35px;
+    height: 70px;
+    left: 24.5px;
+    top: 37.5px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: #000000;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+
+#generate-bg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 76px;
+    position: absolute;
+    right: 8.33%;
+    left: 76.39%;
+    bottom: 13.48%;
+    top: 75.78%;
+    background: linear-gradient(90deg, #0DE0EE 0%, rgba(25, 205, 140, 0.82) 100%);
+    border-radius: 19px;
+}
+
+#generate-txt {
+    position: static;
+    width: 171px;
+    height: 70px;
     left: 24.5px;
     top: 37.5px;
     font-family: Raleway;
@@ -156,7 +197,7 @@ body {
     background: red;
 }
 
-#shirt {
+#shirt-box {
     position: absolute;
     left: 37.99%;
     right: 38.06%;
@@ -165,7 +206,45 @@ body {
     background: #EBEBEB;
 }
 
-#pants {
+.shirt {
+    position: absolute;
+    text-align: center;
+    left: 640px;
+    bottom: 450px;
+    padding: 12px;
+    margin-bottom: 6px;
+    height: 175px;
+    width: 150px;
+    background: var(--shirt-color);
+    border-radius: 10px;
+    z-index: 3;
+}
+
+.shirt::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    height: 50%;
+    width: 40%;
+    background: var(--shirt-color);
+    transform: rotate(45deg);
+    border-radius: 10px;
+}
+
+.shirt::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    height: 50%;
+    width: 40%;
+    background: var(--shirt-color);
+    transform: rotate(-45deg);
+    border-radius: 10px;
+}
+
+#pants-box {
     position: absolute;
     left: 37.99%;
     right: 38.06%;
@@ -174,7 +253,42 @@ body {
     background: #EBEBEB;
 }
 
-#shoes {
+.pants {
+    position: absolute;
+    text-align: center;
+    left: 640px;
+    bottom: 310px;
+    padding: 12px;
+    margin-bottom: 6px;
+    height: 60px;
+    width: 150px;
+}
+
+.pants::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200%;
+    width: 50%;
+    background: var(--pants-color);
+    transform: rotate(12deg);
+    border-radius: 10px;
+}
+
+.pants::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 200%;
+    width: 50%;
+    background: var(--pants-color);
+    transform: rotate(-12deg);
+    border-radius: 10px;
+}
+
+#shoes-box {
     position: absolute;
     left: 37.99%;
     right: 38.06%;
@@ -183,11 +297,28 @@ body {
     background: #EBEBEB;
 }
 
+.shoes {
+    position: relative;
+    z-index: 1;
+    margin-top: 595px;
+    margin-left: 588px;
+    width: 100px;
+    height: 50px;
+    background: var(--shoes-color);
+    border-radius: 200px 30px 30px 30px;
+}
+
+#second-shoe {
+    margin-left: 170px;
+    border-radius: 30px 200px 30px 30px;
+}
+
 #shirt-lock {
     position: absolute;
     left: 705px;
     top: 160px;
     display: none;
+    z-index: 2;
 }
 
 #pants-lock {
@@ -202,4 +333,8 @@ body {
     left: 705px;
     top: 595px;
     display: none;
+}
+
+#generate {
+    position: absolute
 }
