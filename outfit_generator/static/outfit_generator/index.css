@@ -19,6 +19,14 @@ body {
     color: #6bc4f8;
 }
 
+#logo {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    left: 1200px;
+    top: 32px;
+}
+
 #quote {
     position: absolute;
     width: 800px;

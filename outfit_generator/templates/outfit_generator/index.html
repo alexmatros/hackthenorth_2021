@@ -8,21 +8,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Matchgenics</title>
 
     <link rel="stylesheet" href={% static "outfit_generator/index.css" %}>
 </head>
 
 <body>
-    <header>
-        <h1 id="website-name">website name</h1>
-    </header>
+    <h1 id="website-name">matchgenics.</h1>
+    <img src="../../static/outfit_generator/images/logo.png" style="width:75px;height:75px;position:absolute;left:1250px;top:50px">
 
-    <section id="welcome">
-        <h1 id="quote"><b>Fashions fade, style is <i>eternal</i>.</b></h1>
-        <h2 id="ysl">Yves Saint Laurent</h2>
-        <div id="get-started-bg"><a href="{% url "select-style-page"%}" id="get-started-txt">Find your style</a></div>
-    </section>
+    <h1 id="quote"><b>Fashions fade, style is <i>eternal</i>.</b></h1>
+    <h2 id="ysl">Yves Saint Laurent</h2>
+    <div id="get-started-bg"><a href="{% url "select-style-page"%}" id="get-started-txt">Find your style</a></div>
+
+    <div class="marquee">
+        <ul class="marquee-content">
+        </ul>
+    </div>
+
 </body>
 
 </html>
