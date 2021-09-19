@@ -182,3 +182,24 @@ body {
     bottom: 7.81%;
     background: #EBEBEB;
 }
+
+#shirt-lock {
+    position: absolute;
+    left: 705px;
+    top: 160px;
+    display: none;
+}
+
+#pants-lock {
+    position: absolute;
+    left: 705px;
+    top: 400px;
+    display: none;
+}
+
+#shoes-lock {
+    position: absolute;
+    left: 705px;
+    top: 595px;
+    display: none;
+}

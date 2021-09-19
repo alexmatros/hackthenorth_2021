@@ -16,19 +16,23 @@
     <div id="style-bg"><h1 id="style-txt">{{ style|title }}</h1></div>
     
     <div id="l-arrow-shirt" onclick='changeColor("shirt", "-1")'></div>
-    <div id="shirt"></div>
+    <div id="shirt" onclick='toggleLock("shirt-lock", "l-arrow-shirt", "r-arrow-shirt")'></div>
     <div id="r-arrow-shirt" onclick='changeColor("shirt", "1")'></div>
 
     <div id="l-arrow-pants" onclick='changeColor("pants", "-1")'></div>
-    <div id="pants"></div>
+    <div id="pants" onclick='toggleLock("pants-lock", "l-arrow-pants", "r-arrow-pants")'></div>
     <div id="r-arrow-pants" onclick='changeColor("pants", "1")'></div>
 
     <div id="l-arrow-shoes" onclick='changeColor("shoes", "-1")'></div>
-    <div id="shoes"></div>
+    <div id="shoes" onclick='toggleLock("shoes-lock", "l-arrow-shoes", "r-arrow-shoes")'></div>
     <div id="r-arrow-shoes" onclick='changeColor("shoes", "1")'></div>
 
+    <img src="../../static/outfit_generator/images/lock.png" id="shirt-lock" width="50px" height="50px">
+    <img src="../../static/outfit_generator/images/lock.png" id="pants-lock" width="50px" height="50px">
+    <img src="../../static/outfit_generator/images/lock.png" id="shoes-lock" width="50px" height="50px">
+
     <script>
-        const colors = ["#ebebeb", "#00fbff", "#ee00ff", "#000000", "#2bff00"]
+        const colors = ["#ebebeb", "#00fbff", "#ee00ff", "#2bff00", "#217a39"]
         var idx_shirt = 0
         var idx_pants = 0
         var idx_shoes = 0
@@ -77,6 +81,23 @@
                 
                 let newColor = colors[idx_shoes]
                 document.getElementById(id).style.background = newColor
+            }
+        }
+
+        function toggleLock(lock_id, l_a_id, r_a_id) {
+            var lock = document.getElementById(lock_id);
+            var l_a = document.getElementById(l_a_id);
+            var r_a = document.getElementById(r_a_id);
+
+            if (lock.style.display !== "none") {
+                lock.style.display = "none";
+                l_a.style.display = "block";
+                r_a.style.display = "block"
+            }
+            else {
+                lock.style.display = "block";
+                l_a.style.display = "none";
+                r_a.style.display = "none"
             }
         }
     </script>
