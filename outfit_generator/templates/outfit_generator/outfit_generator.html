@@ -19,32 +19,64 @@
     <div id="shirt"></div>
     <div id="r-arrow-shirt" onclick='changeColor("shirt", "1")'></div>
 
-    <div id="l-arrow-pants" onclick=alert("pressed!")></div>
+    <div id="l-arrow-pants" onclick='changeColor("pants", "-1")'></div>
     <div id="pants"></div>
-    <div id="r-arrow-pants" onclick=alert("pressed!")></div>
+    <div id="r-arrow-pants" onclick='changeColor("pants", "1")'></div>
 
-    <div id="l-arrow-shoes" onclick=alert("pressed!")></div>
+    <div id="l-arrow-shoes" onclick='changeColor("shoes", "-1")'></div>
     <div id="shoes"></div>
-    <div id="r-arrow-shoes" onclick=alert("pressed!")></div>
+    <div id="r-arrow-shoes" onclick='changeColor("shoes", "1")'></div>
 
     <script>
         const colors = ["#ebebeb", "#00fbff", "#ee00ff", "#000000", "#2bff00"]
-        var idx_shirt = colors[0]
-        var idx_pants = colors[0]
-        var idx_shoes = colors[0]
+        var idx_shirt = 0
+        var idx_pants = 0
+        var idx_shoes = 0
 
-        function changeColor(id, direction) {
-            alert(document.getElementById(id).style.background)
-            
+        function changeColor(id, direction) { 
             if (id == "shirt") {
                 if (idx_shirt == 0 && parseInt(direction) == -1) {
                     idx_shirt = colors.length - 1
                 }
-                else {
-                    idx_shirt += parseInt(direction)
+                else if (idx_shirt == (colors.length - 1) && parseInt(direction) == 1) {
+                    idx_shirt = 0
                 }
+                else {
+                    idx_shirt = idx_shirt + parseInt(direction)
+                }
+                
+                let newColor = colors[idx_shirt]
+                document.getElementById(id).style.background = newColor
+            }
 
-                document.getElementById(id).style.background = colors[idx_shirt]
+            else if (id == "pants") {
+                if (idx_pants == 0 && parseInt(direction) == -1) {
+                    idx_pants = colors.length - 1
+                }
+                else if (idx_pants == (colors.length - 1) && parseInt(direction) == 1) {
+                    idx_pants = 0
+                }
+                else {
+                    idx_pants = idx_pants + parseInt(direction)
+                }
+                
+                let newColor = colors[idx_pants]
+                document.getElementById(id).style.background = newColor
+            }
+
+            else if (id == "shoes") {
+                if (idx_shoes == 0 && parseInt(direction) == -1) {
+                    idx_shoes = colors.length - 1
+                }
+                else if (idx_shoes == (colors.length - 1) && parseInt(direction) == 1) {
+                    idx_shoes = 0
+                }
+                else {
+                    idx_shoes = idx_shoes + parseInt(direction)
+                }
+                
+                let newColor = colors[idx_shoes]
+                document.getElementById(id).style.background = newColor
             }
         }
     </script>
